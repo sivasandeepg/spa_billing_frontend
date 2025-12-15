@@ -32,7 +32,7 @@ const AdminSettings = () => {
   const [activeTab, setActiveTab] = useState('branding');
   const [formData, setFormData] = useState({
     // Branding Settings
-    companyName: 'POS System',
+    companyName: 'SPA',    
     logoUrl: '',
     tagline: 'Modern Point of Sale Solution',
     phone: '+1 (555) 123-4567',

@@ -139,7 +139,7 @@ const Navbar = () => {
               </div>
             )} 
             <h1 className="text-lg font-bold text-gray-800 tracking-tight">
-              {settings?.companyName || 'Ody Spa'} 
+              {settings?.companyName || 'DEMO SPA'} 
             </h1>
           </div>
           

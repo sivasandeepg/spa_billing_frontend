@@ -52,7 +52,7 @@ const Login = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-700"></div>
       <img 
         src="https://odyspa.com/wp-content/uploads/2024/04/Homepage-logo.svg"   
-        alt="ODY SPA Logo"
+        alt="DEMO SPA Logo"
         className="w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-105"
         onError={(e) => {
           e.target.style.display = 'none';
@@ -99,7 +99,7 @@ const Login = () => {
             <OdySpaLogo size="w-24 h-24" />
             <h1 className="text-4xl font-extralight mb-2 mt-4 tracking-wide">
               <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
-                ODY SPA
+                DEMO SPA
               </span>
             </h1>
             <p className="text-amber-700/80 text-lg font-light mb-1 tracking-wide">Luxury Wellness</p>
@@ -115,7 +115,7 @@ const Login = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-400/90 to-yellow-500/90 rounded-xl mb-4 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <img 
                   src="https://odyspa.com/wp-content/uploads/2024/04/Homepage-logo.svg" 
-                  alt="ODY SPA"
+                  alt="DEMO SPA"
                   className="w-6 h-6 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
@@ -273,7 +273,7 @@ const Login = () => {
               <OdySpaLogo size="w-28 h-28" />
               <h1 className="text-5xl xl:text-6xl font-extralight mb-4 mt-6 tracking-wide">
                 <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
-                  ODY SPA
+                  DEMO SPA
                 </span>
               </h1>
               <p className="text-amber-600/80 text-base xl:text-lg tracking-wider font-light">Luxury Wellness Experience</p>
@@ -324,7 +324,7 @@ const Login = () => {
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-amber-400/90 to-yellow-500/90 rounded-xl mb-6 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                   <img 
                     src="https://odyspa.com/wp-content/uploads/2024/04/Homepage-logo.svg"   
-                    alt="ODY SPA"
+                    alt="DEMO SPA"
                     className="w-7 h-7 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>

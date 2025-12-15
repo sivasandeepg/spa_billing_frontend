@@ -168,7 +168,7 @@ const SpaDashboard = () => {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            ✨ Ody Spa Centers
+            ✨ DEMO SPA Centers
           </h1>
           <p className="text-gray-600">August 12, 2021 • Wellness Dashboard</p>
         </div>
