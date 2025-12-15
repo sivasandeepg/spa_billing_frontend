@@ -48,7 +48,7 @@ const Login = () => {
   // Enhanced Logo Component with subtle animations
   const LuxeAuraLogo = ({ size = "w-18 h-18" }) => (
     <div className={`relative ${size} mx-auto group`}>
-      <div className="absolute inset-0 bg-gradient-to-r from-teal-400/20 to-cyan-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-700"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-700"></div>
       <img 
        src={logo}  
         alt="LUXE AURA Logo"
@@ -57,8 +57,8 @@ const Login = () => {
           e.target.style.display = 'none';
         }}
       />
-      <Sparkles className="absolute -top-1 -right-1 w-3 h-3 text-teal-500 animate-pulse opacity-70" />
-      <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
+      <Sparkles className="absolute -top-1 -right-1 w-3 h-3 text-amber-400 animate-pulse opacity-70" />
+      <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
     </div>
   ); 
   
@@ -67,15 +67,15 @@ const Login = () => {
       {/* Mobile Layout (default) */}
       <div className="lg:hidden h-screen flex flex-col">
         {/* Mobile Header Section - Enhanced */}
-        <div className="flex-1 bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100 relative overflow-hidden px-6 py-8 flex flex-col justify-center items-center">
+        <div className="flex-1 bg-gradient-to-br from-[#2d5a5a] via-[#366b6b] to-[#2d5a5a] relative overflow-hidden px-6 py-8 flex flex-col justify-center items-center">
           {/* Enhanced Background Elements */}
-          <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-r from-teal-200/20 to-cyan-200/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-8 right-6 w-16 h-16 bg-gradient-to-r from-cyan-200/30 to-teal-300/30 rounded-full blur-lg" 
+          <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-r from-amber-300/10 to-yellow-300/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-8 right-6 w-16 h-16 bg-gradient-to-r from-yellow-300/15 to-amber-400/15 rounded-full blur-lg" 
                style={{
                  animation: 'float 4s ease-in-out infinite',
                  animationDelay: '1s'
                }}></div>
-          <div className="absolute top-1/3 right-4 w-12 h-12 bg-gradient-to-r from-teal-300/20 to-cyan-200/20 rounded-full blur-lg animate-ping" 
+          <div className="absolute top-1/3 right-4 w-12 h-12 bg-gradient-to-r from-amber-300/10 to-yellow-300/10 rounded-full blur-lg animate-ping" 
                style={{animationDelay: '2s', animationDuration: '3s'}}></div>
           
           {/* Floating particles */}
@@ -83,7 +83,7 @@ const Login = () => {
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-teal-400/40 rounded-full animate-pulse"
+                className="absolute w-1 h-1 bg-amber-300/30 rounded-full animate-pulse"
                 style={{
                   left: `${20 + i * 15}%`,
                   top: `${30 + i * 10}%`,
@@ -97,12 +97,12 @@ const Login = () => {
           <div className="text-center z-10">
             <LuxeAuraLogo size="w-24 h-24" />
             <h1 className="text-4xl font-extralight mb-2 mt-4 tracking-wide">
-              <span className="bg-gradient-to-r from-teal-700 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="text-white drop-shadow-lg">
                 LUXE AURA
               </span>
             </h1>
-            <p className="text-teal-700/80 text-lg font-light mb-1 tracking-wide">Luxury Wellness</p>
-            <p className="text-teal-600/70 text-sm tracking-wider">Where tranquility meets technology</p>
+            <p className="text-white/90 text-lg font-light mb-1 tracking-wide">Luxury Wellness</p>
+            <p className="text-white/80 text-sm tracking-wider">Where tranquility meets technology</p>
           </div>
         </div>
 
@@ -231,19 +231,19 @@ const Login = () => {
       {/* Desktop Layout (lg and up) - Enhanced */}
       <div className="hidden lg:flex h-screen">
         {/* Left Side - Enhanced Desktop Spa Theme (50% width) */}
-        <div className="w-1/2 relative bg-gradient-to-br from-teal-50 via-cyan-50/80 to-teal-100 overflow-hidden">
+        <div className="w-1/2 relative bg-gradient-to-br from-[#2d5a5a] via-[#366b6b] to-[#2d5a5a] overflow-hidden">
           {/* Enhanced Background Elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-teal-200/20 to-cyan-200/20 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-cyan-200/30 to-teal-300/30 rounded-full blur-lg" 
+            <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-amber-300/10 to-yellow-300/10 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-yellow-300/15 to-amber-400/15 rounded-full blur-lg" 
                  style={{
                    animation: 'float 6s ease-in-out infinite',
                    animationDelay: '1s'
                  }}></div>
-            <div className="absolute bottom-32 left-16 w-40 h-40 bg-gradient-to-r from-teal-200/15 to-cyan-200/15 rounded-full blur-2xl animate-pulse" 
+            <div className="absolute bottom-32 left-16 w-40 h-40 bg-gradient-to-r from-amber-300/8 to-yellow-300/8 rounded-full blur-2xl animate-pulse" 
                  style={{animationDelay: '2s', animationDuration: '4s'}}></div>
             <div className="absolute top-0 right-0 w-96 h-96 opacity-5">
-              <div className="w-full h-full border-2 border-teal-400/20 rounded-full" 
+              <div className="w-full h-full border-2 border-amber-400/20 rounded-full" 
                    style={{
                      animation: 'spin 30s linear infinite'
                    }}></div>
@@ -254,7 +254,7 @@ const Login = () => {
               {[...Array(8)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-1.5 h-1.5 bg-teal-400/30 rounded-full animate-pulse"
+                  className="absolute w-1.5 h-1.5 bg-amber-300/20 rounded-full animate-pulse"
                   style={{
                     left: `${15 + i * 10}%`,
                     top: `${20 + i * 8}%`,
@@ -267,23 +267,23 @@ const Login = () => {
           </div>
 
           {/* Desktop Content - Enhanced */}
-          <div className="relative z-10 flex flex-col justify-center items-center h-full p-8 text-teal-900">
+          <div className="relative z-10 flex flex-col justify-center items-center h-full p-8 text-white">
             <div className="text-center mb-12">
               <LuxeAuraLogo size="w-28 h-28" />
               <h1 className="text-5xl xl:text-6xl font-extralight mb-4 mt-6 tracking-wide">
-                <span className="bg-gradient-to-r from-teal-700 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="text-white drop-shadow-lg">
                   LUXE AURA
                 </span>
               </h1>
-              <p className="text-teal-600/80 text-base xl:text-lg tracking-wider font-light">Luxury Wellness Experience</p>
+              <p className="text-white/90 text-base xl:text-lg tracking-wider font-light">Luxury Wellness Experience</p>
             </div>
 
             {/* Enhanced Features */}
             <div className="space-y-6 max-w-lg mb-12">
               {[
-                { icon: Waves, title: "Seamless Management", desc: "Effortless spa operations", color: "from-teal-200/80 to-cyan-300/80" },
-                { icon: Leaf, title: "Natural Flow", desc: "Intuitive user experience", color: "from-cyan-200/80 to-teal-400/80" },
-                { icon: Droplets, title: "Pure Analytics", desc: "Crystal clear insights", color: "from-teal-300/80 to-cyan-400/80" }
+                { icon: Waves, title: "Seamless Management", desc: "Effortless spa operations", color: "from-amber-200/20 to-yellow-300/20" },
+                { icon: Leaf, title: "Natural Flow", desc: "Intuitive user experience", color: "from-yellow-200/20 to-amber-300/20" },
+                { icon: Droplets, title: "Pure Analytics", desc: "Crystal clear insights", color: "from-amber-300/20 to-yellow-400/20" }
               ].map((feature, index) => (
                 <div key={index} 
                      className="flex items-center space-x-4 group hover:transform hover:translate-x-2 transition-all duration-300"
@@ -292,19 +292,19 @@ const Login = () => {
                        opacity: 0,
                        animation: 'slideInLeft 0.8s ease-out forwards'
                      }}>
-                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300 backdrop-blur-sm`}>
-                    <feature.icon className="w-6 h-6 text-teal-700 group-hover:scale-110 transition-transform duration-200" />
+                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300 backdrop-blur-sm border border-amber-300/20`}>
+                    <feature.icon className="w-6 h-6 text-amber-200 group-hover:scale-110 transition-transform duration-200" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-teal-800 text-base group-hover:text-teal-900 transition-colors duration-200">{feature.title}</h3>
-                    <p className="text-teal-600/80 text-sm">{feature.desc}</p>
+                    <h3 className="font-medium text-white text-base group-hover:text-amber-100 transition-colors duration-200">{feature.title}</h3>
+                    <p className="text-white/80 text-sm">{feature.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <div className="text-center max-w-lg">
-              <p className="text-teal-600/90 italic text-base xl:text-lg leading-relaxed font-light tracking-wide">
+              <p className="text-white/90 italic text-base xl:text-lg leading-relaxed font-light tracking-wide">
                 "Wellness is not a destination, it's a way of life. Let technology enhance your journey to serenity."
               </p>
             </div>
@@ -313,8 +313,8 @@ const Login = () => {
 
         {/* Right Side - Enhanced Desktop Form (50% width) */}
         <div className="w-1/2 flex items-center justify-center bg-white/95 backdrop-blur-sm relative overflow-y-auto">
-          <div className="absolute top-20 right-20 w-32 h-32 bg-teal-100/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-32 left-20 w-24 h-24 bg-cyan-100/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-20 right-20 w-32 h-32 bg-amber-100/10 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 left-20 w-24 h-24 bg-yellow-100/10 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
           
           <div className="w-full max-w-md px-8 py-8">
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 xl:p-10 shadow-xl border border-slate-200/30 hover:shadow-2xl transition-all duration-500">
