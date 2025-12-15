@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom'; 
 import { useAuth } from '../contexts/AuthContext';
 import { User, Lock, Eye, EyeOff, Sparkles, Waves, Leaf, Droplets, ChevronDown, ChevronUp } from 'lucide-react';
-
+import logo from '../assets/logo.png'; 
 const Login = () => {
   const { user, login } = useAuth();
   const location = useLocation();
@@ -51,7 +51,7 @@ const Login = () => {
     <div className={`relative ${size} mx-auto group`}>
       <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-700"></div>
       <img 
-        src="https://odyspa.com/wp-content/uploads/2024/04/Homepage-logo.svg"   
+       src={logo}  // logo svg     
         alt="DEMO SPA Logo"
         className="w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-105"
         onError={(e) => {
@@ -114,7 +114,7 @@ const Login = () => {
             <div className="text-center mb-6">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-400/90 to-yellow-500/90 rounded-xl mb-4 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <img 
-                  src="https://odyspa.com/wp-content/uploads/2024/04/Homepage-logo.svg" 
+                 src={logo}  // logo svg 
                   alt="DEMO SPA"
                   className="w-6 h-6 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                 />
@@ -323,7 +323,7 @@ const Login = () => {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-amber-400/90 to-yellow-500/90 rounded-xl mb-6 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                   <img 
-                    src="https://odyspa.com/wp-content/uploads/2024/04/Homepage-logo.svg"   
+                    src={logo} //logo svg         
                     alt="DEMO SPA"
                     className="w-7 h-7 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                   />
