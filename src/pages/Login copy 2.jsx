@@ -1,9 +1,10 @@
+// src/pages/Login.jsx
+
 import React, { useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom'; 
 import { useAuth } from '../contexts/AuthContext';
-import { User, Lock, Eye, EyeOff, Sparkles, Waves, Leaf, Droplets, ChevronDown } from 'lucide-react';
-import logo from '../assets/logo2.png';   
-
+import { User, Lock, Eye, EyeOff, Sparkles, Waves, Leaf, Droplets, ChevronDown, ChevronUp } from 'lucide-react';
+import logo from '../assets/logo.png'; 
 const Login = () => {
   const { user, login } = useAuth();
   const location = useLocation();
@@ -40,42 +41,42 @@ const Login = () => {
   };
 
   const demoCredentials = [
-    { username: 'admin', password: 'admin123', role: 'Admin', color: 'bg-teal-500' },
-    { username: 'manager1', password: 'manager123', role: 'Manager', color: 'bg-cyan-500' },
-    { username: 'pos1', password: 'pos123', role: 'Staff', color: 'bg-teal-400' }
+    { username: 'admin', password: 'admin123', role: 'Admin', color: 'bg-amber-400' },
+    { username: 'manager1', password: 'manager123', role: 'Manager', color: 'bg-yellow-400' },
+    { username: 'pos1', password: 'pos123', role: 'Staff', color: 'bg-orange-400' }
   ];
 
   // Enhanced Logo Component with subtle animations
-  const LuxeAuraLogo = ({ size = "w-18 h-18" }) => (
+  const OdySpaLogo = ({ size = "w-18 h-18" }) => (
     <div className={`relative ${size} mx-auto group`}>
-      <div className="absolute inset-0 bg-gradient-to-r from-teal-400/20 to-cyan-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-700"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-700"></div>
       <img 
-       src={logo}  
-        alt="LUXE AURA Logo"
+       src={logo}  // logo svg     
+        alt="DEMO SPA Logo"
         className="w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-105"
         onError={(e) => {
           e.target.style.display = 'none';
         }}
       />
-      <Sparkles className="absolute -top-1 -right-1 w-3 h-3 text-teal-500 animate-pulse opacity-70" />
-      <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
+      <Sparkles className="absolute -top-1 -right-1 w-3 h-3 text-amber-400 animate-pulse opacity-70" />
+      <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60" style={{animationDelay: '1s'}}></div>
     </div>
   ); 
   
   return (
-    <div className="h-screen w-full overflow-hidden bg-gradient-to-br from-slate-50 to-teal-50/30">
+    <div className="h-screen w-full overflow-hidden bg-gradient-to-br from-slate-50 to-amber-50/30">
       {/* Mobile Layout (default) */}
       <div className="lg:hidden h-screen flex flex-col">
         {/* Mobile Header Section - Enhanced */}
-        <div className="flex-1 bg-gradient-to-br from-teal-50 via-cyan-50 to-teal-100 relative overflow-hidden px-6 py-8 flex flex-col justify-center items-center">
+        <div className="flex-1 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 relative overflow-hidden px-6 py-8 flex flex-col justify-center items-center">
           {/* Enhanced Background Elements */}
-          <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-r from-teal-200/20 to-cyan-200/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-8 right-6 w-16 h-16 bg-gradient-to-r from-cyan-200/30 to-teal-300/30 rounded-full blur-lg" 
+          <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-r from-amber-200/20 to-yellow-200/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-8 right-6 w-16 h-16 bg-gradient-to-r from-yellow-200/30 to-orange-200/30 rounded-full blur-lg" 
                style={{
                  animation: 'float 4s ease-in-out infinite',
                  animationDelay: '1s'
                }}></div>
-          <div className="absolute top-1/3 right-4 w-12 h-12 bg-gradient-to-r from-teal-300/20 to-cyan-200/20 rounded-full blur-lg animate-ping" 
+          <div className="absolute top-1/3 right-4 w-12 h-12 bg-gradient-to-r from-orange-200/20 to-amber-200/20 rounded-full blur-lg animate-ping" 
                style={{animationDelay: '2s', animationDuration: '3s'}}></div>
           
           {/* Floating particles */}
@@ -83,7 +84,7 @@ const Login = () => {
             {[...Array(6)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-teal-400/40 rounded-full animate-pulse"
+                className="absolute w-1 h-1 bg-amber-300/40 rounded-full animate-pulse"
                 style={{
                   left: `${20 + i * 15}%`,
                   top: `${30 + i * 10}%`,
@@ -95,14 +96,14 @@ const Login = () => {
           </div>
 
           <div className="text-center z-10">
-            <LuxeAuraLogo size="w-24 h-24" />
+            <OdySpaLogo size="w-24 h-24" />
             <h1 className="text-4xl font-extralight mb-2 mt-4 tracking-wide">
-              <span className="bg-gradient-to-r from-teal-700 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
-                LUXE AURA
+              <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                DEMO SPA
               </span>
             </h1>
-            <p className="text-teal-700/80 text-lg font-light mb-1 tracking-wide">Luxury Wellness</p>
-            <p className="text-teal-600/70 text-sm tracking-wider">Where tranquility meets technology</p>
+            <p className="text-amber-700/80 text-lg font-light mb-1 tracking-wide">Luxury Wellness</p>
+            <p className="text-amber-600/70 text-sm tracking-wider">Where tranquility meets technology</p>
           </div>
         </div>
 
@@ -111,14 +112,14 @@ const Login = () => {
           <div className="w-full max-w-sm">
             {/* Form Header */}
             <div className="text-center mb-6">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500/90 to-cyan-600/90 rounded-xl mb-4 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-400/90 to-yellow-500/90 rounded-xl mb-4 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <img 
-                 src={logo}
-                  alt="LUXE AURA"
+                 src={logo}  // logo svg 
+                  alt="DEMO SPA"
                   className="w-6 h-6 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <h2 className="text-xl font-medium text-slate-800 mb-1 tracking-wide">Welcome</h2>  
+              <h2 className="text-xl font-medium text-slate-800 mb-1 tracking-wide">Welcome </h2>  
               <p className="text-slate-600/80 text-sm">Sign in to your account</p>
             </div>
 
@@ -127,12 +128,12 @@ const Login = () => {
               <div className="group">
                 <label className="text-xs font-medium text-slate-700/80 block mb-2 tracking-wide">USERNAME</label>
                 <div className="relative">
-                  <User className="absolute left-3 top-3 w-4 h-4 text-slate-400 transition-colors group-focus-within:text-teal-500" />
+                  <User className="absolute left-3 top-3 w-4 h-4 text-slate-400 transition-colors group-focus-within:text-amber-500" />
                   <input
                     type="text"
                     value={credentials.username}
                     onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50/80 border border-slate-200/50 rounded-lg focus:border-teal-400/60 focus:ring-1 focus:ring-teal-400/30 focus:bg-white transition-all duration-300 text-slate-800 text-sm backdrop-blur-sm"
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50/80 border border-slate-200/50 rounded-lg focus:border-amber-400/60 focus:ring-1 focus:ring-amber-400/30 focus:bg-white transition-all duration-300 text-slate-800 text-sm backdrop-blur-sm"
                     placeholder="Enter username"
                     required
                   />
@@ -142,12 +143,12 @@ const Login = () => {
               <div className="group">
                 <label className="text-xs font-medium text-slate-700/80 block mb-2 tracking-wide">PASSWORD</label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 w-4 h-4 text-slate-400 transition-colors group-focus-within:text-teal-500" />
+                  <Lock className="absolute left-3 top-3 w-4 h-4 text-slate-400 transition-colors group-focus-within:text-amber-500" />
                   <input
                     type={showPassword ? "text" : "password"}
                     value={credentials.password}
                     onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
-                    className="w-full pl-10 pr-12 py-2.5 bg-slate-50/80 border border-slate-200/50 rounded-lg focus:border-teal-400/60 focus:ring-1 focus:ring-teal-400/30 focus:bg-white transition-all duration-300 text-slate-800 text-sm backdrop-blur-sm"
+                    className="w-full pl-10 pr-12 py-2.5 bg-slate-50/80 border border-slate-200/50 rounded-lg focus:border-amber-400/60 focus:ring-1 focus:ring-amber-400/30 focus:bg-white transition-all duration-300 text-slate-800 text-sm backdrop-blur-sm"
                     placeholder="Enter password"
                     required
                   />
@@ -170,7 +171,7 @@ const Login = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-teal-500/90 to-cyan-500/90 hover:from-teal-600 hover:to-cyan-600 text-white py-2.5 rounded-lg font-medium text-sm shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-60 transform hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm"
+                className="w-full bg-gradient-to-r from-amber-400/90 to-orange-400/90 hover:from-amber-500 hover:to-orange-500 text-white py-2.5 rounded-lg font-medium text-sm shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-60 transform hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm"
               >
                 {loading ? (
                   <span className="flex items-center justify-center space-x-2">
@@ -213,7 +214,7 @@ const Login = () => {
                         <button
                           type="button"
                           onClick={() => setCredentials({ username: cred.username, password: cred.password })}
-                          className="px-3 py-1 bg-teal-500/90 hover:bg-teal-600 text-white text-xs rounded-md font-medium transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-sm"
+                          className="px-3 py-1 bg-amber-400/80 hover:bg-amber-500 text-white text-xs rounded-md font-medium transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-sm"
                         >
                           Use
                         </button>
@@ -231,19 +232,19 @@ const Login = () => {
       {/* Desktop Layout (lg and up) - Enhanced */}
       <div className="hidden lg:flex h-screen">
         {/* Left Side - Enhanced Desktop Spa Theme (50% width) */}
-        <div className="w-1/2 relative bg-gradient-to-br from-teal-50 via-cyan-50/80 to-teal-100 overflow-hidden">
+        <div className="w-1/2 relative bg-gradient-to-br from-amber-50 via-yellow-50/80 to-orange-50 overflow-hidden">
           {/* Enhanced Background Elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-teal-200/20 to-cyan-200/20 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-cyan-200/30 to-teal-300/30 rounded-full blur-lg" 
+            <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-amber-200/20 to-yellow-200/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-yellow-200/30 to-orange-200/30 rounded-full blur-lg" 
                  style={{
                    animation: 'float 6s ease-in-out infinite',
                    animationDelay: '1s'
                  }}></div>
-            <div className="absolute bottom-32 left-16 w-40 h-40 bg-gradient-to-r from-teal-200/15 to-cyan-200/15 rounded-full blur-2xl animate-pulse" 
+            <div className="absolute bottom-32 left-16 w-40 h-40 bg-gradient-to-r from-orange-200/15 to-amber-200/15 rounded-full blur-2xl animate-pulse" 
                  style={{animationDelay: '2s', animationDuration: '4s'}}></div>
             <div className="absolute top-0 right-0 w-96 h-96 opacity-5">
-              <div className="w-full h-full border-2 border-teal-400/20 rounded-full" 
+              <div className="w-full h-full border-2 border-amber-400/20 rounded-full" 
                    style={{
                      animation: 'spin 30s linear infinite'
                    }}></div>
@@ -254,7 +255,7 @@ const Login = () => {
               {[...Array(8)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-1.5 h-1.5 bg-teal-400/30 rounded-full animate-pulse"
+                  className="absolute w-1.5 h-1.5 bg-amber-300/30 rounded-full animate-pulse"
                   style={{
                     left: `${15 + i * 10}%`,
                     top: `${20 + i * 8}%`,
@@ -267,23 +268,23 @@ const Login = () => {
           </div>
 
           {/* Desktop Content - Enhanced */}
-          <div className="relative z-10 flex flex-col justify-center items-center h-full p-8 text-teal-900">
+          <div className="relative z-10 flex flex-col justify-center items-center h-full p-8 text-amber-900">
             <div className="text-center mb-12">
-              <LuxeAuraLogo size="w-28 h-28" />
+              <OdySpaLogo size="w-28 h-28" />
               <h1 className="text-5xl xl:text-6xl font-extralight mb-4 mt-6 tracking-wide">
-                <span className="bg-gradient-to-r from-teal-700 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
-                  LUXE AURA
+                <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                  DEMO SPA
                 </span>
               </h1>
-              <p className="text-teal-600/80 text-base xl:text-lg tracking-wider font-light">Luxury Wellness Experience</p>
+              <p className="text-amber-600/80 text-base xl:text-lg tracking-wider font-light">Luxury Wellness Experience</p>
             </div>
 
             {/* Enhanced Features */}
             <div className="space-y-6 max-w-lg mb-12">
               {[
-                { icon: Waves, title: "Seamless Management", desc: "Effortless spa operations", color: "from-teal-200/80 to-cyan-300/80" },
-                { icon: Leaf, title: "Natural Flow", desc: "Intuitive user experience", color: "from-cyan-200/80 to-teal-400/80" },
-                { icon: Droplets, title: "Pure Analytics", desc: "Crystal clear insights", color: "from-teal-300/80 to-cyan-400/80" }
+                { icon: Waves, title: "Seamless Management", desc: "Effortless spa operations", color: "from-amber-200/80 to-yellow-300/80" },
+                { icon: Leaf, title: "Natural Flow", desc: "Intuitive user experience", color: "from-yellow-200/80 to-orange-300/80" },
+                { icon: Droplets, title: "Pure Analytics", desc: "Crystal clear insights", color: "from-orange-200/80 to-amber-300/80" }
               ].map((feature, index) => (
                 <div key={index} 
                      className="flex items-center space-x-4 group hover:transform hover:translate-x-2 transition-all duration-300"
@@ -293,18 +294,18 @@ const Login = () => {
                        animation: 'slideInLeft 0.8s ease-out forwards'
                      }}>
                   <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300 backdrop-blur-sm`}>
-                    <feature.icon className="w-6 h-6 text-teal-700 group-hover:scale-110 transition-transform duration-200" />
+                    <feature.icon className="w-6 h-6 text-amber-700 group-hover:scale-110 transition-transform duration-200" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-teal-800 text-base group-hover:text-teal-900 transition-colors duration-200">{feature.title}</h3>
-                    <p className="text-teal-600/80 text-sm">{feature.desc}</p>
+                    <h3 className="font-medium text-amber-800 text-base group-hover:text-amber-900 transition-colors duration-200">{feature.title}</h3>
+                    <p className="text-amber-600/80 text-sm">{feature.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <div className="text-center max-w-lg">
-              <p className="text-teal-600/90 italic text-base xl:text-lg leading-relaxed font-light tracking-wide">
+              <p className="text-amber-600/90 italic text-base xl:text-lg leading-relaxed font-light tracking-wide">
                 "Wellness is not a destination, it's a way of life. Let technology enhance your journey to serenity."
               </p>
             </div>
@@ -313,21 +314,21 @@ const Login = () => {
 
         {/* Right Side - Enhanced Desktop Form (50% width) */}
         <div className="w-1/2 flex items-center justify-center bg-white/95 backdrop-blur-sm relative overflow-y-auto">
-          <div className="absolute top-20 right-20 w-32 h-32 bg-teal-100/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-32 left-20 w-24 h-24 bg-cyan-100/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-20 right-20 w-32 h-32 bg-amber-100/20 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-32 left-20 w-24 h-24 bg-yellow-100/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
           
           <div className="w-full max-w-md px-8 py-8">
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 xl:p-10 shadow-xl border border-slate-200/30 hover:shadow-2xl transition-all duration-500">
               {/* Desktop Form Header */}
               <div className="text-center mb-8">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-teal-500/90 to-cyan-600/90 rounded-xl mb-6 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-amber-400/90 to-yellow-500/90 rounded-xl mb-6 shadow-lg backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                   <img 
-                    src={logo}        
-                    alt="LUXE AURA"
+                    src={logo} //logo svg         
+                    alt="DEMO SPA"
                     className="w-7 h-7 brightness-0 invert transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <h2 className="text-2xl font-medium text-slate-800 mb-2 tracking-wide">Welcome</h2>
+                <h2 className="text-2xl font-medium text-slate-800 mb-2 tracking-wide">Welcome </h2>
                 <p className="text-slate-600/80 text-base">Sign in to your account</p>
               </div>
 
@@ -336,12 +337,12 @@ const Login = () => {
                 <div className="group">
                   <label className="text-sm font-medium text-slate-700/80 block mb-3 tracking-wide">USERNAME</label>
                   <div className="relative">
-                    <User className="absolute left-4 top-4 w-5 h-5 text-slate-400 transition-colors group-focus-within:text-teal-500" />
+                    <User className="absolute left-4 top-4 w-5 h-5 text-slate-400 transition-colors group-focus-within:text-amber-500" />
                     <input
                       type="text"
                       value={credentials.username}
                       onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3.5 bg-slate-50/50 border border-slate-200/50 rounded-xl focus:border-teal-400/60 focus:ring-2 focus:ring-teal-400/20 focus:bg-white/80 transition-all duration-300 text-slate-800 backdrop-blur-sm hover:bg-slate-50/70"
+                      className="w-full pl-12 pr-4 py-3.5 bg-slate-50/50 border border-slate-200/50 rounded-xl focus:border-amber-400/60 focus:ring-2 focus:ring-amber-400/20 focus:bg-white/80 transition-all duration-300 text-slate-800 backdrop-blur-sm hover:bg-slate-50/70"
                       placeholder="Enter username"
                       required
                     />
@@ -351,12 +352,12 @@ const Login = () => {
                 <div className="group">
                   <label className="text-sm font-medium text-slate-700/80 block mb-3 tracking-wide">PASSWORD</label>
                   <div className="relative">
-                    <Lock className="absolute left-4 top-4 w-5 h-5 text-slate-400 transition-colors group-focus-within:text-teal-500" />
+                    <Lock className="absolute left-4 top-4 w-5 h-5 text-slate-400 transition-colors group-focus-within:text-amber-500" />
                     <input
                       type={showPassword ? "text" : "password"}
                       value={credentials.password}
                       onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
-                      className="w-full pl-12 pr-14 py-3.5 bg-slate-50/50 border border-slate-200/50 rounded-xl focus:border-teal-400/60 focus:ring-2 focus:ring-teal-400/20 focus:bg-white/80 transition-all duration-300 text-slate-800 backdrop-blur-sm hover:bg-slate-50/70"
+                      className="w-full pl-12 pr-14 py-3.5 bg-slate-50/50 border border-slate-200/50 rounded-xl focus:border-amber-400/60 focus:ring-2 focus:ring-amber-400/20 focus:bg-white/80 transition-all duration-300 text-slate-800 backdrop-blur-sm hover:bg-slate-50/70"
                       placeholder="Enter password"
                       required
                     />
@@ -379,7 +380,7 @@ const Login = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-teal-500/90 to-cyan-500/90 hover:from-teal-600 hover:to-cyan-600 text-white py-3.5 rounded-xl font-medium text-base shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60 transform hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm"
+                  className="w-full bg-gradient-to-r from-amber-400/90 to-orange-400/90 hover:from-amber-500 hover:to-orange-500 text-white py-3.5 rounded-xl font-medium text-base shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60 transform hover:scale-[1.02] active:scale-[0.98] backdrop-blur-sm"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center space-x-2">
@@ -422,7 +423,7 @@ const Login = () => {
                           <button
                             type="button"
                             onClick={() => setCredentials({ username: cred.username, password: cred.password })}
-                            className="px-4 py-1.5 bg-teal-500/90 hover:bg-teal-600 text-white text-sm rounded-lg font-medium transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-sm"
+                            className="px-4 py-1.5 bg-amber-400/80 hover:bg-amber-500 text-white text-sm rounded-lg font-medium transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-sm"
                           >
                             Use
                           </button>
