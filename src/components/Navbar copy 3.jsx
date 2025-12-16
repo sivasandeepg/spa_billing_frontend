@@ -186,7 +186,7 @@ const Navbar = () => {
               </div>
             )}
             <h1 className="text-lg font-bold text-gray-900">
-              {settings?.companyName || 'POS System'}
+              {settings?.companyName || 'Luxe Aura'}
             </h1>
           </div>
           
@@ -232,7 +232,7 @@ const Navbar = () => {
             )}
             <div>
               <h2 className="text-lg font-bold text-gray-900">
-                {settings?.companyName || 'POS System'}
+                {settings?.companyName || 'Luxe Aura'}
               </h2>
               <p className="text-sm text-gray-500">Management System</p>
             </div>

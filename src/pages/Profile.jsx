@@ -37,7 +37,7 @@ const Profile = () => {
           name: fetchedProfile.name || '',
           email: fetchedProfile.email || '',
           phone: fetchedProfile.phone || '',
-          company: 'POS Systems Inc.', // This can be fetched from a settings API
+          company: 'Luxe Auras Inc.', // This can be fetched from a settings API
           address: fetchedProfile.address || '',
           department: 'Branch Operations', // This can be fetched from a settings API
         });

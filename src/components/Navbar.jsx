@@ -161,7 +161,7 @@ const Navbar = () => {
               </div>
             )}
             <h1 className="text-base font-bold text-gray-800 tracking-tight">
-              {settings?.companyName || 'POS System'}
+              {settings?.companyName || 'Luxe Aura'}
             </h1>
           </div>
           
@@ -223,7 +223,7 @@ const Navbar = () => {
             {!(sidebarCollapsed && isDesktop) && (
               <div>
                 <h2 className="text-base font-bold text-gray-800 leading-tight">
-                  {settings?.companyName || 'POS System'}
+                  {settings?.companyName || 'Luxe Aura'}
                 </h2>
                 <p className="text-xs text-gray-500 font-medium">Management System</p>
               </div>

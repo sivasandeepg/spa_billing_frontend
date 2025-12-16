@@ -22,7 +22,7 @@ const AdminProfile = () => {
     name: user?.name || '',
     email: user?.email || '',
     phone: '+1 (555) 123-4567',
-    company: 'POS Systems Inc.',
+    company: 'Luxe Auras Inc.',
     address: '123 Business Street, City, State 12345'
   });
   const [passwordData, setPasswordData] = useState({

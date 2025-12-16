@@ -58,7 +58,7 @@ const Login = () => {
               </div>
             </div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              POS System
+              Luxe Aura
             </h1>
             <p className="text-gray-600 mt-2">Sign in to access your dashboard</p>
           </div>

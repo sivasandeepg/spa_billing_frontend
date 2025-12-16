@@ -787,7 +787,7 @@ const AdminSettings = () => {
             <Settings className="h-8 w-8 mr-3 text-purple-600" />
             System Settings
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 mt-2">Customize your POS system appearance, integrations, and features</p>
+          <p className="text-gray-600 dark:text-gray-400 mt-2">Customize your Luxe Aura appearance, integrations, and features</p>
         </div>
 
         {savedMessage && (

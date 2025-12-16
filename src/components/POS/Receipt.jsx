@@ -27,7 +27,7 @@ const Receipt = ({ transaction, branch, type = 'new' }) => {
           textTransform: 'uppercase',
           letterSpacing: '1px'
         }}>
-          {branch?.name || 'POS SYSTEM'}
+          {branch?.name || 'Luxe Aura'}
         </h3>
         <p className="text-xs mb-1" style={{ fontSize: '10px', margin: '2px 0' }}>
           {branch?.address || 'N/A'}

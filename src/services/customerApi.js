@@ -111,7 +111,7 @@ const customerApiService = {
         }
     },
 
-    // Add customer with service details (used by POS system)
+    // Add customer with service details (used by Luxe Aura)
     addCustomerWithService: async (customerData) => {
         try {
             const response = await customerApi.post('/', {

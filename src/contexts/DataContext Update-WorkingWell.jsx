@@ -40,7 +40,7 @@ export const DataProvider = ({ children }) => {
   ];
 
   const defaultSettings = {
-    companyName: 'POS System', logoUrl: '', tagline: 'Modern Point of Sale Solution', phone: '+1 (555) 123-4567', email: 'admin@pos.com', website: 'https://pos-system.com', address: '123 Business Street, City, State 12345', businessType: 'Retail Store', currency: 'USD', taxRate: 0, receiptFooter: 'Thank you for your business!', theme: 'light', primaryColor: '#8B5CF6', fontFamily: 'Inter', fontSize: 'medium', timezone: 'America/New_York', dateFormat: 'MM/DD/YYYY', stripePublishableKey: '', stripeSecretKey: '', paypalClientId: '', emailProvider: 'smtp', smtpHost: '', smtpPort: 587, smtpUser: '', smtpPass: '', enableNotifications: true, enableInventoryAlerts: true, autoBackup: true, sessionTimeout: 30, enableTwoFactor: false, allowGuestCheckout: true, enableLoyaltyProgram: false
+    companyName: 'Luxe Aura', logoUrl: '', tagline: 'Modern Point of Sale Solution', phone: '+1 (555) 123-4567', email: 'admin@pos.com', website: 'https://pos-system.com', address: '123 Business Street, City, State 12345', businessType: 'Retail Store', currency: 'USD', taxRate: 0, receiptFooter: 'Thank you for your business!', theme: 'light', primaryColor: '#8B5CF6', fontFamily: 'Inter', fontSize: 'medium', timezone: 'America/New_York', dateFormat: 'MM/DD/YYYY', stripePublishableKey: '', stripeSecretKey: '', paypalClientId: '', emailProvider: 'smtp', smtpHost: '', smtpPort: 587, smtpUser: '', smtpPass: '', enableNotifications: true, enableInventoryAlerts: true, autoBackup: true, sessionTimeout: 30, enableTwoFactor: false, allowGuestCheckout: true, enableLoyaltyProgram: false
   };
 
   useEffect(() => {
